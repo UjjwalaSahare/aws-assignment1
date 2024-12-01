@@ -1,11 +1,13 @@
 package Policy_API.repository;
 
-import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
-import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.repository.CrudRepository;
-import com.amazonaws.auth.policy.Policy;
-@EnableScan
-@EnableDynamoDBRepositories
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+import Policy_API.entity.Policy;
+
+@EnableScheduling
+@EnableJpaRepositories
 public interface PolicyRepository extends CrudRepository<Policy, String>  {
 	
 }

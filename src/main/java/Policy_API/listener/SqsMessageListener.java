@@ -24,15 +24,11 @@ public class SqsMessageListener {
 
 	    @SqsListener("listener")
 	    public void listen(String message) throws JsonProcessingException {
-	        //log.info("message - {}", message);
 	        JsonNode rootNode = objectMapper.readTree(message);
 	        String policyJson = rootNode.get("Message").asText();
-	       // log.info("read the json - {}", policyJson);
 	        Policy policy = objectMapper.readValue(policyJson, Policy.class);
-	        //log.info("ABC - {}, {}, {}", policy.getId(), policy.getName(), policy.getAmount());
 	        if (policy.getPolicyName() != null && !policy.getPolicyName().isEmpty()) {
 	            policyRepository.save(policy);
-	            //log.info("Message saved to DynamoDB - {}", policy);
 	        }
 	    }
 }

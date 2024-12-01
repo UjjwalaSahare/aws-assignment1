@@ -31,7 +31,7 @@ public class PolicyController {
     public String insertIntoDynamoDB(@RequestHeader("x-api-header") String apiKey, @Valid @RequestBody Policy policy) throws JsonProcessingException {
         String policyJson = objectMapper.writeValueAsString(policy);
 
-        // Send the notification directly
+     
         snsTemplate.sendNotification("sender", policyJson);
 
         return "Message published to SNS topic sender";
