@@ -10,12 +10,12 @@ import Policy_API.repository.PolicyRepository;
 @Service
 public class PolicyService {
     
-    @Autowired
-    private PolicyRepository policyRepository;
-
-    public void savePolicy(Policy policy) {
-    	policyRepository.save(policy);
-        
-    }
+	/*
+	 * @Autowired private PolicyRepository policyRepository;
+	 * 
+	 * public void savePolicy(Policy policy) { policyRepository.save(policy);
+	 * 
+	 * }
+	 */
 
 }

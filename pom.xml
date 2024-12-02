@@ -30,6 +30,12 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+	<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -79,12 +85,12 @@
 	<dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk-dynamodb</artifactId>
-			<version>1.12.588</version>
+			<version>1.12.779</version>
 		</dependency>
 <dependency>
     <groupId>com.github.derjust</groupId>
     <artifactId>spring-data-dynamodb</artifactId>
-    <version>5.2.5</version> <!-- Replace with the latest version -->
+    <version>5.0.3</version> <!-- Replace with the latest version -->
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation -->
